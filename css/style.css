@@ -1,3 +1,24 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;
+    color: mintcream;
+    background-color: royalblue;
+}
+
+#search {
+    background-color: mintcream;
+}
+
+#submit {
+    background-color: darkorange; 
+    color:mintcream;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2.5px solid darkorange;
+    margin: 1em 0;
+    padding: 0;
+
 }

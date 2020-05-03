@@ -1,0 +1,4 @@
+﻿As an avid texter, I want to search for GIFs so that I can express myself to my friends.
+
+
+As a blogger, I want to find tasteful GIFs so I will gain more followers.
