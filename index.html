@@ -10,23 +10,34 @@
 
     <body>
 
-        <!--title-->
-        <header><h1>giphEasy</h1></header>
-        <h2>Popular</h2>
-        <h2>Happy</h2>
-        <h2>Sad</h2>
-        <h2>Hungry</h2>
+
+        <div class="navbar">
+            <!--title-->
+            <header><h1 id="title">giphEasy</h1></header>
+
+            <!--quick searches-->
+            <h2><a class="active quicksearch" href='#'>Happy</a></h2>
+            <h2><a class="quicksearch" href='#'>Sad</a></h2>
+            <h2><a class="quicksearch" href='#'>Angry</a></h2>
+            <h2><a class="quicksearch" href='#'>Hungry</a></h2>
+
+            <!--search and submit-->
+            <div class="wrap">
+                <form id="searchbar">
+                    <input type="text" name="search" id="search" placeholder="Search GIPHY ">
+                    <button type="submit" id="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        
+
+
+
+
 
            
 
-        <!-- input field (with a type of search) and a submit button -->
-        <form>
-            <input type="text" name="search" id="search">
-            <button type="submit" id="submit">Submit</button>
-        </form>
 
-        <!--line-->
-        <hr/>
 
 
 
