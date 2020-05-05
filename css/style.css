@@ -7,6 +7,10 @@ body {
 .navbar {
   overflow: hidden;
   background-color: #083EAB;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .navbar > * {

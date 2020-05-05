@@ -13,9 +13,11 @@ body {
 //navbar
 .navbar {
     overflow:hidden;
-    //background-color: #f7882f;
     background-color: #083EAB;
-
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
 }
 .navbar >* {
     float:left;
@@ -50,7 +52,6 @@ h2 {
     background-color: #F7892F;;
     color: white;
   }
-
 
 
 //search bar and button
