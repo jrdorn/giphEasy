@@ -2,7 +2,7 @@
 body {
     font-family: 'Raleway', sans-serif;
     color: mintcream;
-    background-color: royalblue;
+    background-color: #1660F7;
 }
 
 
@@ -13,24 +13,32 @@ body {
 //navbar
 .navbar {
     overflow:hidden;
-    background-color: darkorange;
-
+    background-color: #f7882f;
 }
 .navbar >* {
     float:left;
     text-align:center;
 }
+h2 {
+    padding:.3em
+}
 #title {
     padding:0em .75em;
 }
 .quicksearch {
-    padding:0em 3em;
+    padding:1em 3.5em;
 }
 .quicksearch:hover {
     background-color: green;
 }
 
 //search bar and button
+.wrap{
+    float:right;
+    width: 30;
+    top: 50%;
+    left: 50%;
+  }
 #searchbar {
     float:right;
     padding: 1.5em 1em;
@@ -42,7 +50,8 @@ body {
 #search {
     width: 100%;
     padding: 1em;
-    height: 1em;
+    height: 1.358em;
+    border:none;
     border-radius: 5px 0 0 5px;
     background-color:mintcream;
   }
@@ -50,19 +59,11 @@ body {
 #submit {
     width: 4em;
     height: 1.85em;
-    //border: 1px solid #00B4CC;
-    //background: #00B4CC;
+    border: none;
     text-align: center;
-    background-color: darkorange; 
+    background-color: #F77C16; 
     color:mintcream;
     border-radius: 0 5px 5px 0;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
-.wrap{
-    width: 20;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
