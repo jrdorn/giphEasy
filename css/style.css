@@ -23,11 +23,18 @@ h2 {
 }
 
 .quicksearch {
-  padding: 1em 3.5em;
+  background-color: #3075FF;
+  color: white;
+  text-decoration: none;
+  padding: 0.53em 0.53em;
+  border-radius: 25% 10%;
+  margin: 1em 3em;
+  transition: 0.3s;
 }
 
 .quicksearch:hover {
   background-color: #F7892F;
+  color: white;
 }
 
 .wrap {

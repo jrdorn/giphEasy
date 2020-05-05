@@ -27,12 +27,31 @@ h2 {
 #title {
     padding:0em .75em;
 }
+//.quicksearch {
+  //  padding:1em 3.5em;
+//}
+//.quicksearch:hover {
+ //   background-color: #F7892F;
+//}
+
+
+
 .quicksearch {
-    padding:1em 3.5em;
-}
-.quicksearch:hover {
-    background-color: #F7892F;
-}
+    background-color: #3075FF;
+    color:white;
+    text-decoration:none;
+    padding: .53em .53em;
+    border-radius: 25% 10%;
+    margin:1em 3em;
+    transition: 0.3s;
+  }
+  
+  .quicksearch:hover {
+    background-color: #F7892F;;
+    color: white;
+  }
+
+
 
 //search bar and button
 .wrap{
