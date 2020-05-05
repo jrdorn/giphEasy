@@ -1,12 +1,12 @@
 body {
   font-family: "Raleway", sans-serif;
   color: mintcream;
-  background-color: #1660F7;
+  background-color: #3075FF;
 }
 
 .navbar {
   overflow: hidden;
-  background-color: #f7882f;
+  background-color: #083EAB;
 }
 
 .navbar > * {
@@ -27,7 +27,7 @@ h2 {
 }
 
 .quicksearch:hover {
-  background-color: green;
+  background-color: #F7892F;
 }
 
 .wrap {
@@ -59,7 +59,7 @@ h2 {
   height: 1.85em;
   border: none;
   text-align: center;
-  background-color: #F77C16;
+  background-color: #F7892F;
   color: mintcream;
   border-radius: 0 5px 5px 0;
   font-size: 1.25rem;
