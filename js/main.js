@@ -1,11 +1,29 @@
-import { Grid } from '@giphy/react-components'
-import { GiphyFetch } from '@giphy/js-fetch-api'
+$( document ).ready(function(){
 
-//use @giphy/js-fetch-api to fetch gifs, instantiate with api key
-const gf = new GiphyFetch('8bOT9SFOdzb5sATlyta8Qm4c1XvXI1LS')
+    $('#submit').on('click', function(){
 
-//configure your fetch: fetch 10 gifs at a time as the user scrolls (offset is handled by the grid)
-const fetchGifs = (offset: number) => gf.trending({ offset, limit: 10 })
+     
 
-//Render the React Component and pass it your fetchGifs as a prop
-ReactDOM.render(<Grid width={800} columns={3} fetchGifs={fetchGifs} />, target)
+      var userInput = $('#search').val();
+
+      var queryURL = 'http://api.giphy.com/v1/gifs/search?q=' + userInput + '&api_key=8bOT9SFOdzb5sATlyta8Qm4c1XvXI1LS&limit=9';
+
+
+   
+      $.ajax({url: queryURL, method: 'GET'}).done(function(response){
+
+
+        for (let step=0; step < 9; step++){
+            var gifstring = '#gif' + step.toString();
+            var giphyURL = response.data[step].images.fixed_height.url;
+            $(gifstring).attr('src', giphyURL);
+        }
+
+      });
+      
+      
+      return false;
+    })
+    
+  });
+
