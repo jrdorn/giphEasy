@@ -2,6 +2,16 @@
 
 $( document ).ready(function(){
 
+  myUrl = 'http://api.giphy.com/v1/gifs/trending?api_key=8bOT9SFOdzb5sATlyta8Qm4c1XvXI1LS&limit=9'
+  $.ajax({url: myUrl, method: 'GET'}).done(function(response){
+
+    for (let step=0; step < 9; step++){
+        var gifstring = '#gif' + step.toString();
+        var giphyURL = response.data[step].images.fixed_height.url;
+        $(gifstring).attr('src', giphyURL);
+    }
+  });
+
 
     $('.quicksearch').on('click', function(){
 
