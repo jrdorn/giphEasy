@@ -57,17 +57,18 @@ nav {
   justify-content: space-around;
 }
 
-Gradient #59CFC1 #59CF7E h1 {
+/* searchbar  text #aaaaaa */
+
+h1 {
   font-size: xx-large;
   padding-left: 0.5em;
 }
 
 .quicksearch {
-  background-color: #f7892f;
   color: white;
   text-decoration: none;
   padding: 0.33em 0.33em;
-  border-radius: 25% 10%;
+  border-radius: 10% 10%;
   margin: 1em 3em;
   transition: 0.3s;
 }
@@ -99,7 +100,12 @@ Gradient #59CFC1 #59CF7E h1 {
   height: 1.358em;
   border: none;
   border-radius: 5px 0 0 5px;
-  background-color: mintcream;
+  background-color: #333333;
+}
+
+::placeholder {
+  color: #aaaa;
+  opacity: 1;
 }
 
 #submit {
@@ -107,10 +113,17 @@ Gradient #59CFC1 #59CF7E h1 {
   height: 1.85em;
   border: none;
   text-align: center;
-  background-color: #f7892f;
+  background: linear-gradient(45deg, #59d4eb, #eb5999);
   color: mintcream;
   border-radius: 0 5px 5px 0;
   font-size: 1.25rem;
+}
+
+#submitxform {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .container {
