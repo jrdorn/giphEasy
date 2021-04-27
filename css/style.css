@@ -2,8 +2,8 @@
 
 body {
   font-family: "Raleway", sans-serif;
-  color: mintcream;
-  background-color: #3075ff;
+  color: #f7f7f7;
+  background-color: #1c1c1c;
   padding-top: 7em;
 }
 
@@ -47,7 +47,7 @@ body {
 
 nav {
   overflow: hidden;
-  background-color: #083eab;
+  background-color: #58b791;
   position: fixed;
   top: 0;
   left: 0;
@@ -57,13 +57,13 @@ nav {
   justify-content: space-around;
 }
 
-h1 {
+Gradient #59CFC1 #59CF7E h1 {
   font-size: xx-large;
   padding-left: 0.5em;
 }
 
 .quicksearch {
-  background-color: #3075ff;
+  background-color: #f7892f;
   color: white;
   text-decoration: none;
   padding: 0.33em 0.33em;
@@ -126,9 +126,6 @@ h1 {
 }
 
 .col > div {
-  border-radius: 5px;
   padding: 10px;
-  background-color: #cfe8dc;
-  border: 2px solid #4fb9e3;
   text-align: center;
 }
