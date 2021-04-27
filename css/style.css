@@ -1,10 +1,15 @@
 /* || General Setup */
 
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;900&display=swap");
+
 body {
-  font-family: "Raleway", sans-serif;
   color: #f7f7f7;
   background-color: #1c1c1c;
   padding-top: 7em;
+}
+
+#title {
+  font-family: "Raleway", sans-serif;
 }
 
 /* alternative box model */
@@ -65,7 +70,9 @@ h1 {
 }
 
 .quicksearch {
-  color: white;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  color: #f7f7f7;
   text-decoration: none;
   padding: 0.33em 0.33em;
   border-radius: 10% 10%;
