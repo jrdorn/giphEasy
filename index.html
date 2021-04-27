@@ -17,35 +17,30 @@
     <section class="head">
       <!--title-->
       <header id="title">
-        <h1>giphEasy</h1>
+        <h1><a href="">giphEasy</a></h1>
       </header>
-
       <!--quick searches-->
-      <h2>
-        <ul>
-          <a class="quicksearch" id="happy" href="#">Happy</a>
-          <a class="quicksearch" id="sad" href="#">Sad</a>
-          <a class="quicksearch" id="angry" href="#">Angry</a>
-          <a class="quicksearch" id="hungry" href="#">Hungry</a>
-        </ul>
-      </h2>
+      <ul id="qs">
+        <a class="quicksearch" id="happy" href="#">Happy</a>
+        <a class="quicksearch" id="sad" href="#">Sad</a>
+        <a class="quicksearch" id="angry" href="#">Angry</a>
+        <a class="quicksearch" id="hungry" href="#">Hungry</a>
+      </ul>
     </section>
 
     <section class="sbar">
       <!-- search and submit -->
-      <div>
-        <form id="searchbar">
-          <input
-            type="text"
-            name="search"
-            id="search"
-            placeholder="Search GIPHY"
-          />
-          <button type="submit" id="submit">
-            <div id="submitxform">⚲</div>
-          </button>
-        </form>
-      </div>
+      <form id="searchbar">
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Search GIFs"
+        />
+        <button type="submit" id="submit">
+          <div id="submitxform">⚲</div>
+        </button>
+      </form>
     </section>
 
     <section class="gifs">
@@ -75,7 +70,9 @@
           <div><img id="gif8" src="" /></div>
         </div>
       </div>
-      <img src="logo.png" />
+      <div id="logo">
+        <img src="logo.png" />
+      </div>
     </section>
   </body>
 </html>
