@@ -3,13 +3,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;900&display=swap");
 
 body {
-  color: #f7f7f7;
   background-color: #1c1c1c;
-  padding-top: 7em;
 }
 
-#title {
-  font-family: "Raleway", sans-serif;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
 }
 
 /* alternative box model */
@@ -26,8 +27,14 @@ html {
 
 /* || Main Grid Layout */
 
-.header {
-  grid-area: header;
+.head {
+  grid-area: head;
+  display: flex;
+}
+
+.sbar {
+  grid-area: sbar;
+  background-color: #58b791;
 }
 
 .gifs {
@@ -37,9 +44,9 @@ html {
 #index {
   display: grid;
   gap: 1em;
-  grid-template-areas: "header" "gifs";
+  grid-template-areas: "head" "sbar" "gifs";
   grid-template-columns: 100%;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto auto 1fr;
 }
 
 html,
@@ -50,28 +57,19 @@ body {
 
 /* || Typography */
 
-nav {
-  overflow: hidden;
-  background-color: #58b791;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+html {
+  color: #f7f7f7;
+  font-family: "Raleway", sans-serif;
 }
 
-/* searchbar  text #aaaaaa */
-
-h1 {
-  font-size: xx-large;
-  padding-left: 0.5em;
+#title {
+  font-weight: 900;
+  font-size: 2rem;
 }
 
 .quicksearch {
-  font-family: "Raleway", sans-serif;
   font-weight: 500;
+  font-size: 1.5rem;
   color: #f7f7f7;
   text-decoration: none;
   padding: 0.33em 0.33em;
@@ -85,13 +83,7 @@ h1 {
   color: white;
 }
 
-.wrap {
-  float: right;
-  width: 30;
-  top: 50%;
-  left: 50%;
-  padding-right: 0.5em;
-}
+/* searchbar and button styling */
 
 #searchbar {
   float: right;
@@ -132,6 +124,8 @@ h1 {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+/* styling for gifs */
 
 .container {
   margin: 2em auto;
