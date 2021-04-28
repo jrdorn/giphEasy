@@ -88,15 +88,38 @@ a {
   font-weight: 500;
   font-size: 1.7rem;
   transition: 0.3s;
-  border-bottom: 0.25em solid #9d6dcf;
+  border-bottom: 0.25em solid;
   padding: 0.5em;
   padding-bottom: 0.3em;
   padding-top: 0.3em;
 }
 
-.quicksearch:hover {
-  background-color: #876ee6;
-  color: white;
+#happy {
+  border-bottom-color: #7ecf59;
+}
+#happy:hover {
+  background-color: #5f9c43;
+}
+
+#sad {
+  border-bottom-color: #6970db;
+}
+#sad:hover {
+  background-color: #5157a8;
+}
+
+#angry {
+  border-bottom-color: #9d6dcf;
+}
+#angry:hover {
+  background-color: #76529c;
+}
+
+#hungry {
+  border-bottom-color: #db69d5;
+}
+#hungry:hover {
+  background-color: #a851a4;
 }
 
 /* searchbar and button styling */
@@ -139,14 +162,13 @@ a {
 
 #sbutton {
   width: 4em;
-  height: 4.5em;
+  height: 4.2em;
   border: none;
   text-align: center;
   color: inherit;
   border-radius: 0 5px 5px 0;
   font-size: 1.25rem;
   /* animated gradient */
-  border-radius: 1rem;
   background-image: linear-gradient(45deg, #892ae8, #e85e1e, #892ae8, #e85e1e);
   background-size: 300% 100%;
   animation: animate 4s infinite linear;
