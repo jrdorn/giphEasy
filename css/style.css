@@ -124,7 +124,7 @@ a {
 
 /* searchbar and button styling */
 
-#searchbar {
+.searchbar {
   float: right;
   padding: 1.5em 2em;
   width: 100%;
@@ -136,64 +136,22 @@ a {
 #search {
   width: 100%;
   padding: 0.7em;
-  height: 4em;
+  height: 3.5em;
   border: none;
   border-radius: 3px 0 0 3px;
-  background-color: #333333;
+  background-color: #f7f7f7;
+  font-family: inherit;
+  color: #1c1c1c;
+  font-size: 1.5rem;
+  padding-left: 1em;
 }
 
 ::placeholder {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  color: #aaaa;
-  padding-left: 1em;
+  font-size: 1.5rem;
+  color: #1c1c1c;
   opacity: 1;
-}
-
-/* TEST GRADIENT */
-
-/* *********************** */
-.viewport {
-  height: 25px;
-  width: 25px;
-  overflow: hidden;
-  background-color: green;
-}
-
-.grad {
-  background-color: red;
-  background-image: linear-gradient(
-    to-right,
-    rgba(0, 0, 0, 0.9) 25%,
-    rgba(0, 0, 0, 0.1) 50%,
-    rgba(0, 0, 0, 0.9) 75%
-  );
-  height: 100%;
-  width: 100%;
-  -webkit-animation: 1s linear infinite move_eye;
-  animation: 1s linear infinite move_eye;
-  /**/
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-@-webkit-keyframes move_eye {
-  from {
-    margin-left: -20%;
-  }
-  to {
-    margin-left: 100%;
-  }
-}
-@keyframes move_eye {
-  from {
-    margin-left: -20%;
-  }
-  to {
-    margin-left: 100%;
-  }
 }
 
 /* search button */
@@ -209,13 +167,14 @@ a {
   overflow: hidden;
   background: linear-gradient(
     45deg,
-    RGBA(137, 42, 232, 1),
-    RGBA(232, 94, 30, 1),
-    RGBA(137, 42, 232, 1),
-    RGBA(232, 94, 30, 1),
-    RGBA(137, 42, 232, 1)
+    RGBA(233, 64, 87, 1),
+    RGBA(242, 113, 33, 1),
+    RGBA(233, 64, 87, 1),
+    RGBA(242, 113, 33, 1),
+    RGBA(233, 64, 87, 1)
   );
-  background-size: 300% 100%;
+
+  background-size: 200% 200%;
   animation: animate 4s linear infinite;
 }
 @keyframes animate {
@@ -233,6 +192,14 @@ a {
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+/* keep searchbar at top of screen on scroll */
+
+.sbar.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 /* styling for gifs */

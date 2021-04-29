@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  //get gifs from GIPHY and load on page
   function myFunc(funcUrl) {
     $.ajax({ url: funcUrl, method: "GET" }).done(function (response) {
       for (let step = 0; step < 9; step++) {
@@ -27,5 +28,14 @@ $(document).ready(function () {
     var searchURL = giphyAPI + searchInput + myKey;
     myFunc(searchURL);
     return false;
+  });
+
+  document.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".sbar");
+    const navbarHeight = 100;
+
+    const dFromTop = Math.abs(document.body.getBoundingClientRect().top);
+    if (dFromTop >= navbarHeight) navbar.classList.add("fixed");
+    else navbar.classList.remove("fixed");
   });
 });
