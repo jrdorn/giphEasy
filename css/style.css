@@ -150,15 +150,53 @@ a {
   opacity: 1;
 }
 
-/* animated gradient */
-@keyframes animate {
-  o% {
-    background-position: 0 0;
+/* TEST GRADIENT */
+
+/* *********************** */
+.viewport {
+  height: 25px;
+  width: 25px;
+  overflow: hidden;
+  background-color: green;
+}
+
+.grad {
+  background-color: red;
+  background-image: linear-gradient(
+    to-right,
+    rgba(0, 0, 0, 0.9) 25%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.9) 75%
+  );
+  height: 100%;
+  width: 100%;
+  -webkit-animation: 1s linear infinite move_eye;
+  animation: 1s linear infinite move_eye;
+  /**/
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+@-webkit-keyframes move_eye {
+  from {
+    margin-left: -20%;
   }
-  100% {
-    background-position: 100% 0;
+  to {
+    margin-left: 100%;
   }
 }
+@keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+
+/* search button */
 
 #sbutton {
   width: 4em;
@@ -168,10 +206,25 @@ a {
   color: inherit;
   border-radius: 0 5px 5px 0;
   font-size: 1.25rem;
-  /* animated gradient */
-  background-image: linear-gradient(45deg, #892ae8, #e85e1e, #892ae8, #e85e1e);
+  overflow: hidden;
+  background: linear-gradient(
+    45deg,
+    RGBA(137, 42, 232, 1),
+    RGBA(232, 94, 30, 1),
+    RGBA(137, 42, 232, 1),
+    RGBA(232, 94, 30, 1),
+    RGBA(137, 42, 232, 1)
+  );
   background-size: 300% 100%;
-  animation: animate 4s infinite linear;
+  animation: animate 4s linear infinite;
+}
+@keyframes animate {
+  from {
+    background-position: 0% 100%;
+  }
+  to {
+    background-position: 100% 0%;
+  }
 }
 
 #submitxform {
@@ -199,6 +252,10 @@ a {
 .col > div {
   padding: 10px;
   text-align: center;
+}
+
+div > img {
+  border-radius: 0.5em;
 }
 
 /* center GIPHY logo */
