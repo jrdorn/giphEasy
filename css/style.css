@@ -200,6 +200,20 @@ a {
   position: fixed;
   top: 0;
   width: 100%;
+  display: flex;
+}
+
+/* add giphEasy logo on scroll */
+
+.scrollLogo {
+  font-family: inherit;
+  font-weight: 900;
+  font-size: 3rem;
+  margin-left: 0.5em;
+}
+
+.scrollLogo.hidden {
+  display: none;
 }
 
 /* styling for gifs */

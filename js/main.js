@@ -31,11 +31,17 @@ $(document).ready(function () {
   });
 
   document.addEventListener("scroll", function () {
-    const navbar = document.querySelector(".sbar");
-    const navbarHeight = 100;
+    const sbar = document.querySelector(".sbar");
+    const scrollLogo = document.querySelector(".scrollLogo");
+    const sbarHeight = 100;
 
     const dFromTop = Math.abs(document.body.getBoundingClientRect().top);
-    if (dFromTop >= navbarHeight) navbar.classList.add("fixed");
-    else navbar.classList.remove("fixed");
+    if (dFromTop >= sbarHeight) {
+      sbar.classList.add("fixed");
+      scrollLogo.classList.remove("hidden");
+    } else {
+      sbar.classList.remove("fixed");
+      scrollLogo.classList.add("hidden");
+    }
   });
 });
