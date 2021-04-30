@@ -239,6 +239,11 @@ div > img {
   border-radius: 0.5em;
 }
 
+/* make gifs appear clickable  */
+img {
+  cursor: pointer;
+}
+
 /* center GIPHY logo */
 
 #logo {
