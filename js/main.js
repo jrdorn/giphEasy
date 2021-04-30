@@ -30,6 +30,43 @@ $(document).ready(function () {
     return false;
   });
 
+  //copy gif url on click
+  $("img").on("click", function copyMe() {
+    ///insert element, copy to clipboard, remove element
+    var textArea = document.createElement("textarea");
+    textArea.style.position = "fixed";
+    textArea.style.top = 0;
+    textArea.style.left = 0;
+    textArea.style.width = "2em";
+    textArea.style.height = "2em";
+    textArea.style.border = "none";
+    textArea.style.outline = "none";
+    textArea.style.boxShadow = "none";
+    textArea.style.background = "transparent";
+
+    var gifUrl = $(this).attr("src");
+
+    textArea.value = gifUrl;
+
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+      var successful = document.execCommand("copy");
+      alert("Copied GIF url");
+    } catch (err) {
+      console.log(err);
+    }
+
+    document.body.removeChild(textArea);
+  });
+
+  //sticky search bar
   document.addEventListener("scroll", function () {
     const sbar = document.querySelector(".sbar");
     const scrollLogo = document.querySelector(".scrollLogo");
