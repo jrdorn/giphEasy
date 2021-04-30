@@ -11,6 +11,37 @@ $(document).ready(function () {
         src = gifList[i].images.fixed_height_small.url;
         container.innerHTML += "<img src='" + src + "' />";
       }
+      //
+      container.addEventListener("click", (event) => {
+        var textArea = document.createElement("textarea");
+        textArea.style.position = "fixed";
+        textArea.style.top = 0;
+        textArea.style.left = 0;
+        textArea.style.width = "2em";
+        textArea.style.height = "2em";
+        textArea.style.border = "none";
+        textArea.style.outline = "none";
+        textArea.style.boxShadow = "none";
+        textArea.style.background = "transparent";
+
+        var textUrl = event.target.src;
+
+        textArea.value = textUrl;
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+
+        try {
+          document.execCommand("copy");
+          alert("Copied GIF url");
+        } catch (err) {
+          console.log(err);
+        }
+
+        document.body.removeChild(textArea);
+      });
+
+      //
     });
   }
 
@@ -43,37 +74,6 @@ $(document).ready(function () {
   $("#title").on("click", function () {
     gSearch(trendingURL);
     return false;
-  });
-
-  //copy url on clicking a gif
-  $("img").on("click", function copyMe() {
-    ///insert element, copy to clipboard, remove element
-    var textArea = document.createElement("textarea");
-    textArea.style.position = "fixed";
-    textArea.style.top = 0;
-    textArea.style.left = 0;
-    textArea.style.width = "2em";
-    textArea.style.height = "2em";
-    textArea.style.border = "none";
-    textArea.style.outline = "none";
-    textArea.style.boxShadow = "none";
-    textArea.style.background = "transparent";
-
-    var gifUrl = $(this).attr("src");
-
-    textArea.value = gifUrl;
-    document.body.appendChild(textArea);
-    textArea.focus();
-    textArea.select();
-
-    try {
-      var successful = document.execCommand("copy");
-      alert("Copied GIF url");
-    } catch (err) {
-      console.log(err);
-    }
-
-    document.body.removeChild(textArea);
   });
 
   //sticky search bar
