@@ -218,24 +218,14 @@ a {
 
 /* styling for gifs */
 
-.container {
-  margin: 2em auto;
+.gifs {
+  /* margin: 2em auto; */
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: auto;
   grid-gap: 1em;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-flow: row wrap;
-  flex-basis: 33.333333%;
 }
 
-.col > div {
-  padding: 10px;
-  text-align: center;
-}
-
-div > img {
+img {
   border-radius: 0.5em;
 }
 

@@ -1,36 +1,51 @@
 $(document).ready(function () {
   //get gifs from GIPHY and load on page
-  function myFunc(funcUrl) {
-    $.ajax({ url: funcUrl, method: "GET" }).done(function (response) {
-      for (let step = 0; step < 9; step++) {
-        var gifstring = "#gif" + step.toString();
-        var giphyURL = response.data[step].images.fixed_height.url;
-        $(gifstring).attr("src", giphyURL);
+  function gSearch(initURL) {
+    $.ajax({ url: initURL, method: "GET" }).done(function (response) {
+      var gifList = response.data;
+      var container = document.querySelector(".gifs");
+      container.innerHTML = ""; //clear to start with empty container on each new search
+      var src;
+      //iterate through JSON and append gifs to container
+      for (let i = 0; i < gifList.length; i++) {
+        src = gifList[i].images.fixed_height_small.url;
+        container.innerHTML += "<img src='" + src + "' />";
       }
     });
   }
 
+  //load initial gifs
   var trendingURL =
-    "http://api.giphy.com/v1/gifs/trending?api_key=8bOT9SFOdzb5sATlyta8Qm4c1XvXI1LS&limit=9";
-  myFunc(trendingURL);
+    "http://api.giphy.com/v1/gifs/trending?api_key=8bOT9SFOdzb5sATlyta8Qm4c1XvXI1LS";
+  gSearch(trendingURL);
 
+  //GIPHY API key
   var giphyAPI = "http://api.giphy.com/v1/gifs/search?q=";
-  var myKey = "&api_key=8bOT9SFOdzb5sATlyta8Qm4c1XvXI1LS&limit=9";
+  var myKey = "&api_key=8bOT9SFOdzb5sATlyta8Qm4c1XvXI1LS";
 
+  //keywords to quick search (happy, sad, angry, hungry)
   $(".quicksearch").on("click", function () {
     var quickInput = this.id;
     var quickURL = giphyAPI + quickInput + myKey;
-    myFunc(quickURL);
+    gSearch(quickURL);
+    return false; //prevent default page refresh
   });
 
+  //search button functionality
   $("#sbutton").on("click", function () {
     var searchInput = $("#search").val();
     var searchURL = giphyAPI + searchInput + myKey;
-    myFunc(searchURL);
+    gSearch(searchURL);
     return false;
   });
 
-  //copy gif url on click
+  //view trending gifs on clicking title
+  $("#title").on("click", function () {
+    gSearch(trendingURL);
+    return false;
+  });
+
+  //copy url on clicking a gif
   $("img").on("click", function copyMe() {
     ///insert element, copy to clipboard, remove element
     var textArea = document.createElement("textarea");
@@ -47,11 +62,6 @@ $(document).ready(function () {
     var gifUrl = $(this).attr("src");
 
     textArea.value = gifUrl;
-
-    document.body.appendChild(textArea);
-    textArea.focus();
-    textArea.select();
-
     document.body.appendChild(textArea);
     textArea.focus();
     textArea.select();
