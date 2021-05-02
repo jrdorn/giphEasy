@@ -1,5 +1,3 @@
-#giphEasy
-
 ## Introduction
 
 giphEasy is a simple search engine for GIFs.
