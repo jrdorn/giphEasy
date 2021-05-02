@@ -219,10 +219,13 @@ a {
 /* styling for gifs */
 
 .gifs {
-  /* margin: 2em auto; */
-  display: grid;
-  grid-template-columns: auto;
-  grid-gap: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.gifs > * {
+  margin: 1em;
 }
 
 img {

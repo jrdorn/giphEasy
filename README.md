@@ -4,7 +4,7 @@ giphEasy is a simple search engine for GIFs.
 Users are greeted with a list of currently trending GIFs,
 and may either click on a common search term such as "happy" or "sad," or search for something specific.
 
-I drew inspiration from the official GIPHY site and Tenor, and wanted to practice implementing a similar design using CSS Grid.
+I drew inspiration from the official GIPHY site and Tenor, and wanted to practice implementing a similar design.
 
 ## Status
 
