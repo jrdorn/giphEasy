@@ -42,12 +42,23 @@ html {
   grid-area: gifs;
 }
 
+.logo {
+  grid-area: logo;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1.5em;
+  display: flex;
+  justify-content: center;
+  background-color: inherit;
+}
+
 #index {
   display: grid;
   gap: 1em;
-  grid-template-areas: "head" "sbar" "gifs";
+  grid-template-areas: "head" "sbar" "gifs" "logo";
   grid-template-columns: 100%;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto auto 1fr auto;
 }
 
 html,
@@ -82,6 +93,7 @@ a {
   justify-content: space-between;
   width: 100%;
   padding-right: 3em;
+  max-width: 347px; /* responsive design */
 }
 
 .quicksearch {
@@ -122,6 +134,37 @@ a {
   background-color: #a851a4;
 }
 
+/* responsive header  */
+@media (min-width: 544px) {
+  .head {
+    border: 1px solid red;
+  }
+  #title {
+    border: 1px solid navy;
+  }
+  #qs {
+    justify-self: end;
+    border: 1px solid purple;
+  }
+}
+@media (min-width: 768px) {
+  .head {
+    border: 1px solid orange;
+  }
+  #title {
+    border: 1px solid turquoise;
+    /* margin-right: 5em; */
+  }
+  #qs {
+    border: 1px solid magenta;
+  }
+}
+@media (min-width: 992px) {
+  .head {
+    border: 1px solid blue;
+  }
+}
+
 /* searchbar and button styling */
 
 .searchbar {
@@ -144,6 +187,7 @@ a {
   color: #1c1c1c;
   font-size: 1.5rem;
   padding-left: 1em;
+  max-width: 1110px; /* responsive searchbar */
 }
 
 ::placeholder {
@@ -239,9 +283,9 @@ img {
 
 /* center GIPHY logo */
 
-#logo {
+/* #logo {
   display: flex;
   justify-content: center;
   margin-top: 2.5em;
   margin-bottom: 2.5em;
-}
+} */
