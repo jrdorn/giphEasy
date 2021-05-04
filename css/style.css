@@ -291,10 +291,10 @@ img {
   max-width: 1110px;
 }
 
-/* gifs max width */
+/* gifs max width, spacing */
 
 .gifs {
-  /* max-width: 1100px;
-  display: grid;
-  justify-content: center; */
+  max-width: 1160px;
+  justify-self: center;
+  padding-bottom: 5.5em;
 }
