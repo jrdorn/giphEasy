@@ -8,7 +8,7 @@ I drew inspiration from the official GIPHY site and Tenor, and wanted to practic
 
 ## Status
 
-This project is currently under development.
+This project is currently under development. Future updates include the option to save gifs to file, email gifs, and send gifts via SMS.
 
 ## Features
 
